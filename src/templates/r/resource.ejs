@@ -1,5 +1,5 @@
 <%
-var thisType = classify(resource.name).toLowerCase()
+var thisType = snake(classify(resource.name))
 
 function paramNameInComment(param) {
   return param.required ? param.name : ('[' + param.name + ']');
