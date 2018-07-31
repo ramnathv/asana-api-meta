@@ -314,7 +314,11 @@ var langs = {
     genericPath: genericPath,
     curlExamplesForAction: curlExamplesForAction,
     curlExamplesForKeys: curlExamplesForKeys
-  })
+  }),
+  "r": _.merge({}, common, {
+    typeName: typeNameTranslator("r"),
+    comment: wrapHashComment
+  }),
 };
 
 module.exports = function(lang) {
