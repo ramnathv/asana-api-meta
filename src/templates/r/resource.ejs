@@ -20,7 +20,7 @@ function paramNameInComment(param) {
     var extraParam = null;
     if (action.method === "GET") {
       extraParam = {
-        name: 'params',
+        name: '...',
         type: 'Object',
         comment: 'Parameters for the request'
       };
@@ -43,13 +43,13 @@ function paramNameInComment(param) {
 <%= prefix(paramNameInComment(param) + ' : {' + typeName(param.type) + "} " +
             param.comment, "#'    ", false) %><%});%>
 #' @export
-asn_<%= thisType %>_<%= name %> = function(<%= pathParamNames.concat([""]).join(", ") %>params = list(), ...){
+asn_<%= thisType %>_<%= name %> = function(<%= pathParamNames.concat([""]).join(", ") %>..., options = list()){
 <% if (pathParamNames.length > 0) { 
 %>  path = sprintf(<%= JSON.stringify(action.path) %>, <%= pathParamNames.join(", ")%>)
 <% } else { 
 %>  path =  <%= JSON.stringify(action.path) %>
 <% } 
-%>  asn_<%= method %>(endpoint = path, ..., params = params)
+%>  asn_<%= method %>(endpoint = path, ..., options = options)
 }
 
 <% }); %>
