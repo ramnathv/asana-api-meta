@@ -63,6 +63,11 @@ var languages = {
     outputPath: '_content/developers/02-api-reference',
     // Keep the other markdown pages and metadata there
     preserveRepoFiles: true
+  },
+  r: {
+    repo: 'Asana/r-asana',
+    outputPath: 'R',
+    preserveRepoFiles: true
   }
 };
 
