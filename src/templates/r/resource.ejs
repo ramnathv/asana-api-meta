@@ -52,7 +52,7 @@ NULL
             param.comment, "#'    ", false) %><%});%>
 #' @export
 #' @family <%= thisType %>
-asn_<%= thisType %>_<%= name %> = function(<%= pathParamNames.concat([""]).join(", ") %>..., options = list()){
+asn_<%= thisType %>_<%= name %> = function(<%= pathParamNames.concat([""]).join(", ") %>..., options = list(), .token = Sys.getenv('ASANA_ACCESS_TOKEN')){
 <% if (pathParamNames.length > 0) { 
 %>  path = sprintf(<%= JSON.stringify(action.path) %>, <%= pathParamNames.join(", ")%>)
 <% } else { 
