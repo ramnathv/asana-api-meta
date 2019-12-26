@@ -10,6 +10,7 @@ It is currently used to build the following client libraries:
   * [`php-asana`](https://github.com/Asana/php-asana)
   * [`python-asana`](https://github.com/Asana/python-asana)
   * [`ruby-asana`](https://github.com/Asana/ruby-asana)
+  * [`r-asana`](https://github.com/Asana/r-asana)
   
 It is also used to build the [Asana API Reference](https://asana.com/developers/api-reference) in the developer documentation. 
 
