@@ -35,3 +35,10 @@ dist
 
 #IntelliJ
 .idea
+
+# R
+.Rproj.user
+.Rhistory
+*.Rproj
+package-lock.json
+
